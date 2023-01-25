@@ -35,9 +35,10 @@ dados <- read.csv("dados.csv")
 #função de dose-resposta "LL.4"(limite de detecção) e os nomes das curvas de
 #dose-resposta são "Slope", "Lower Limit", "Upper Limit" e "dados".
 
-dados.m1 <- drm(conc ~ dead, data = dados, fct = LL.4 (names = c("Slope", "Lower Limit", "Upper Limit", "dados")))
+dados_m1 <- drm(conc ~ dead, data = dados, fct = LL.4(names =
+c("Slope", "Lower Limit", "Upper Limit", "dados")))
 
-summary(dados.m1)
+summary(dados_m1)
 
 #(PT-BR)
 #A função drm() é usada para modelar relações entre uma variável de resposta
@@ -116,4 +117,4 @@ ED(mod, 50, interval = "delta")
 #and death rate and also to understand how the toxicidade affects the death rate
 #according to the model.
 
-plot(mod,type="all", ylab = "death rate",xlab = "toxicidade")
+plot(mod, type = "all", ylab = "death rate", xlab = "toxicidade")
